@@ -13,6 +13,8 @@
 		1712BF9422A5836E0025ACCB /* CKBullitenBoard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1712BF9222A5836E0025ACCB /* CKBullitenBoard.xcdatamodeld */; };
 		1712BF9622A5836F0025ACCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1712BF9522A5836F0025ACCB /* Assets.xcassets */; };
 		1712BF9922A5836F0025ACCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1712BF9722A5836F0025ACCB /* LaunchScreen.storyboard */; };
+		1712BFA322A585C60025ACCB /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1712BFA222A585C60025ACCB /* CloudKit.framework */; };
+		1712BFA522A587510025ACCB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1712BFA422A587510025ACCB /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		1712BF9522A5836F0025ACCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1712BF9822A5836F0025ACCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1712BF9A22A5836F0025ACCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1712BFA022A585C20025ACCB /* CKBullitenBoard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CKBullitenBoard.entitlements; sourceTree = "<group>"; };
+		1712BFA222A585C60025ACCB /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		1712BFA422A587510025ACCB /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1712BFA322A585C60025ACCB /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +46,11 @@
 		1712BF7F22A5836E0025ACCB = {
 			isa = PBXGroup;
 			children = (
+				1712BFA722A5B83F0025ACCB /* Resources */,
+				1712BFA622A5B80C0025ACCB /* Model */,
 				1712BF8A22A5836E0025ACCB /* CKBullitenBoard */,
 				1712BF8922A5836E0025ACCB /* Products */,
+				1712BFA122A585C60025ACCB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +65,39 @@
 		1712BF8A22A5836E0025ACCB /* CKBullitenBoard */ = {
 			isa = PBXGroup;
 			children = (
-				1712BF8B22A5836E0025ACCB /* AppDelegate.swift */,
 				1712BF8D22A5836E0025ACCB /* ViewController.swift */,
-				1712BF8F22A5836E0025ACCB /* Main.storyboard */,
-				1712BF9522A5836F0025ACCB /* Assets.xcassets */,
-				1712BF9722A5836F0025ACCB /* LaunchScreen.storyboard */,
 				1712BF9A22A5836F0025ACCB /* Info.plist */,
 				1712BF9222A5836E0025ACCB /* CKBullitenBoard.xcdatamodeld */,
 			);
 			path = CKBullitenBoard;
+			sourceTree = "<group>";
+		};
+		1712BFA122A585C60025ACCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1712BFA222A585C60025ACCB /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1712BFA622A5B80C0025ACCB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1712BFA422A587510025ACCB /* Message.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1712BFA722A5B83F0025ACCB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1712BFA022A585C20025ACCB /* CKBullitenBoard.entitlements */,
+				1712BF8B22A5836E0025ACCB /* AppDelegate.swift */,
+				1712BF8F22A5836E0025ACCB /* Main.storyboard */,
+				1712BF9522A5836F0025ACCB /* Assets.xcassets */,
+				1712BF9722A5836F0025ACCB /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +132,14 @@
 				TargetAttributes = {
 					1712BF8722A5836E0025ACCB = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -139,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1712BF9422A5836E0025ACCB /* CKBullitenBoard.xcdatamodeld in Sources */,
+				1712BFA522A587510025ACCB /* Message.swift in Sources */,
 				1712BF8E22A5836E0025ACCB /* ViewController.swift in Sources */,
 				1712BF8C22A5836E0025ACCB /* AppDelegate.swift in Sources */,
 			);
@@ -286,6 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CKBullitenBoard/CKBullitenBoard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39YHWYH93Z;
 				INFOPLIST_FILE = CKBullitenBoard/Info.plist;
@@ -304,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CKBullitenBoard/CKBullitenBoard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39YHWYH93Z;
 				INFOPLIST_FILE = CKBullitenBoard/Info.plist;
