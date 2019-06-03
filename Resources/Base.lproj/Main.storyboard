@@ -24,7 +24,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FFO-a5-2te">
                                     <rect key="frame" x="4" y="4" width="402" height="46"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N9l-8r-4Wd">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="61N-I3-3J8">
                                             <rect key="frame" x="0.0" y="0.0" width="338" height="46"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -39,6 +39,9 @@
                                             <state key="normal" title="Post">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="postButtonPressed:" destination="V5x-JG-6IM" eventType="touchUpInside" id="96c-2p-qLA"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -82,6 +85,9 @@
                             <outlet property="delegate" destination="V5x-JG-6IM" id="fos-io-eV5"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="messageTextField" destination="61N-I3-3J8" id="gDU-fu-YSx"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZM9-4l-6UD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
